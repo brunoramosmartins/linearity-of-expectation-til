@@ -12,8 +12,8 @@ The final TIL is short (~300–400 words). The supporting material is intentiona
 
 - [x] **Phase 0 — Foundation:** thesis, scope, project scaffold, GitHub configuration.
 - [x] **Phase 1 — Proof and Counterexample:** rigorous proof of linearity in discrete and general settings, plus the counterexample for products.
-- [ ] **Phase 2 — Variance Counterpoint** (in progress): $\text{Var}(X+Y)$ decomposition, equicorrelation, effective sample size.
-- [ ] **Phase 3 — Indicator Variables and Applications**
+- [x] **Phase 2 — Variance Counterpoint:** $\text{Var}(X+Y)$ decomposition, equicorrelation, effective sample size.
+- [ ] **Phase 3 — Indicator Variables and Applications** (in progress): coupon collector, hat-check, inversions, triangles in $G(n, p)$.
 - [ ] **Phase 4 — Budget Modelling Simulation**
 - [ ] **Phase 5 — TIL Writing**
 - [ ] **Phase 6 — Review & Publish**
