@@ -10,8 +10,15 @@ The final TIL is short (~300–400 words). The supporting material is intentiona
 
 ## Project Status
 
-**Phase 0 — Foundation** (in progress).
-Subsequent phases produce the proof, the variance counterpoint, the indicator-variable applications, the budget simulation, the TIL itself, and the publication pass. See [`roadmap-linearity-of-expectation-til-v1.md`](./roadmap-linearity-of-expectation-til-v1.md) for the full plan.
+- [x] **Phase 0 — Foundation:** thesis, scope, project scaffold, GitHub configuration.
+- [ ] **Phase 1 — Proof and Counterexample** (in progress): rigorous proof of linearity in discrete and general settings, plus the counterexample for products.
+- [ ] **Phase 2 — Variance Counterpoint**
+- [ ] **Phase 3 — Indicator Variables and Applications**
+- [ ] **Phase 4 — Budget Modelling Simulation**
+- [ ] **Phase 5 — TIL Writing**
+- [ ] **Phase 6 — Review & Publish**
+
+See [`roadmap-linearity-of-expectation-til-v1.md`](./roadmap-linearity-of-expectation-til-v1.md) for the full plan.
 
 ## Repository Structure
 
