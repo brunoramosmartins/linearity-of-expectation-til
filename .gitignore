@@ -1,0 +1,78 @@
+# ─────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Linting / type checking
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+profile_default/
+ipython_config.py
+
+# ─────────────────────────────────────────────
+# Editors / IDEs
+# ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────────────────────
+# Claude Code
+# ─────────────────────────────────────────────
+# Track .claude/CLAUDE.md and shared rules; ignore local state.
+.claude/worktrees/
+.claude/settings.local.json
+.claude/cache/
+.claude/logs/
+.claude/.session*
+
+# ─────────────────────────────────────────────
+# Project-specific
+# ─────────────────────────────────────────────
+# Generated figures are committed only when ready; ignore scratch outputs.
+figures/scratch/
+figures/*.tmp.png
+
+# Local environment overrides
+.env
+.env.local
