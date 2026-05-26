@@ -11,20 +11,17 @@ The final TIL is short (~300–400 words). The supporting material is intentiona
 ## Project Status
 
 - [x] **Phase 0 — Foundation:** thesis, scope, project scaffold, GitHub configuration.
-- [ ] **Phase 1 — Proof and Counterexample** (in progress): rigorous proof of linearity in discrete and general settings, plus the counterexample for products.
-- [ ] **Phase 2 — Variance Counterpoint**
+- [x] **Phase 1 — Proof and Counterexample:** rigorous proof of linearity in discrete and general settings, plus the counterexample for products.
+- [ ] **Phase 2 — Variance Counterpoint** (in progress): $\text{Var}(X+Y)$ decomposition, equicorrelation, effective sample size.
 - [ ] **Phase 3 — Indicator Variables and Applications**
 - [ ] **Phase 4 — Budget Modelling Simulation**
 - [ ] **Phase 5 — TIL Writing**
 - [ ] **Phase 6 — Review & Publish**
 
-See [`roadmap-linearity-of-expectation-til-v1.md`](./roadmap-linearity-of-expectation-til-v1.md) for the full plan.
-
 ## Repository Structure
 
 ```
 linearity-of-expectation-til/
-├── .claude/           # Claude Code project rules (CLAUDE.md)
 ├── .github/           # Issue/PR templates and setup scripts
 ├── article/           # Final TIL source (Phase 5)
 ├── docs/              # Thesis, scope, outline
@@ -35,9 +32,8 @@ linearity-of-expectation-til/
 ├── scripts/           # Standalone experiment scripts
 ├── src/               # Reusable source code
 ├── tests/             # Unit tests (author runs manually)
-├── requirements.txt
-├── pyproject.toml
-└── roadmap-linearity-of-expectation-til-v1.md
+├── pyproject.toml     # Dependencies (runtime + dev + notebooks extras)
+└── LICENSE
 ```
 
 ## Setup
@@ -50,7 +46,6 @@ The author is on **Windows + Python 3.10** and does not use `make`. All commands
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
 ```
 
 On Bash (Git Bash / WSL):
@@ -59,20 +54,29 @@ On Bash (Git Bash / WSL):
 python -m venv .venv
 source .venv/Scripts/activate    # or .venv/bin/activate on Linux/macOS
 python -m pip install --upgrade pip
-pip install -r requirements.txt
 ```
 
-### 2. (Optional) Install the project in editable mode
+### 2. Install the project (editable) with all extras
+
+Dependencies live in `pyproject.toml`. Install in editable mode plus both extras groups (`dev` = ruff/pytest, `notebooks` = jupyter/ipykernel):
 
 ```bash
-pip install -e .
+pip install -e ".[dev,notebooks]"
 ```
 
-This makes `src/` importable as `from src.<module> import ...`.
+This also makes `src/` importable as `from src.<module> import ...`.
+
+Variants:
+
+```bash
+pip install -e .                  # runtime only (numpy/scipy/pandas/matplotlib/seaborn)
+pip install -e ".[dev]"           # runtime + ruff + pytest
+pip install -e ".[notebooks]"     # runtime + jupyter
+```
 
 ## Quality Checks
 
-These are run **manually by the author** (per [`.claude/CLAUDE.md`](./.claude/CLAUDE.md)):
+These are run **manually by the author**:
 
 ```bash
 # Lint + format
@@ -83,7 +87,9 @@ ruff format .
 pytest tests/
 ```
 
-## GitHub Setup (one-time, after creating the GitHub repo)
+## GitHub Setup
+
+Labels, milestones, and the initial set of issues can be created either via the GitHub web UI (Issues tab → Labels / Milestones / New issue), or by running the setup scripts in `.github/setup/` (these require the [`gh`](https://cli.github.com/) CLI):
 
 ```bash
 bash .github/setup/labels.sh    owner/repo
@@ -91,16 +97,12 @@ bash .github/setup/milestones.sh owner/repo
 bash .github/setup/issues.sh    owner/repo
 ```
 
-Replace `owner/repo` with the actual GitHub slug.
-
 ## Workflow
 
 - **Branches** follow `phase-N/short-description`, `fix/...`, `docs/...`.
 - **Commits** follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>(<scope>): <description>`.
 - **Tags** mark the end of each phase (`v0.x-phase-name`); `v1.0.0` is the public release.
 - **Releases** are created only when there is external value (simulation, draft TIL, final TIL).
-
-See [`.claude/CLAUDE.md`](./.claude/CLAUDE.md) for the full set of project rules.
 
 ## License
 

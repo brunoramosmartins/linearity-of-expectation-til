@@ -57,14 +57,15 @@ ipython_config.py
 Thumbs.db
 
 # ─────────────────────────────────────────────
-# Claude Code
+# Claude Code (kept entirely local — not part of the public portfolio)
 # ─────────────────────────────────────────────
-# Track .claude/CLAUDE.md and shared rules; ignore local state.
-.claude/worktrees/
-.claude/settings.local.json
-.claude/cache/
-.claude/logs/
-.claude/.session*
+.claude/
+
+# ─────────────────────────────────────────────
+# Project planning (internal — not part of the public portfolio)
+# ─────────────────────────────────────────────
+roadmap-*.md
+prompt-*.md
 
 # ─────────────────────────────────────────────
 # Project-specific
