@@ -122,7 +122,7 @@ def expected_inversions(n: int) -> float:
 
 
 def simulate_triangles_gnp(n: int, p: float, rng: np.random.Generator) -> int:
-    """Number of triangles in an Erdős–Rényi random graph ``G(n, p)``.
+    """Number of triangles in an Erdos-Renyi random graph ``G(n, p)``.
 
     Builds the symmetric adjacency matrix ``A`` by drawing each upper-triangular
     entry as ``Bernoulli(p)``, then counts triangles via ``trace(A^3) / 6``
