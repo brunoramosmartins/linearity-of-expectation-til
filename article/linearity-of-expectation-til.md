@@ -1,3 +1,11 @@
+---
+title: "The Most Useful Theorem in Probability Has No Independence Hypothesis"
+description: "Linearity of expectation holds under any dependence — correlation never touches the first moment, only the variance."
+date: 2026-07-11
+category: til
+tags: probability, expectation, correlation
+---
+
 # The Most Useful Theorem in Probability Has No Independence Hypothesis
 
 ## Hook
