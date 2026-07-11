@@ -68,6 +68,13 @@ roadmap-*.md
 prompt-*.md
 
 # ─────────────────────────────────────────────
+# Article translations (review-only; portfolio is EN)
+# ─────────────────────────────────────────────
+article/*.pt-br.md
+article/*.es.md
+article/*.fr.md
+
+# ─────────────────────────────────────────────
 # Project-specific
 # ─────────────────────────────────────────────
 # Generated figures are committed only when ready; ignore scratch outputs.
